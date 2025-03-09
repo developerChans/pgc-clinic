@@ -36,4 +36,7 @@ public class PetDetailResponse {
                         // .map(VisitResponse::from)
                         // .collect(Collectors.toList()))                
     }
+    public boolean isNew() {
+        return this.id == null;
+    }
 }

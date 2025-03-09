@@ -9,9 +9,13 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
+
 import java.time.LocalDate;
 
+import lombok.Setter;
+
 @Getter
+@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -28,6 +32,5 @@ public class PetCreateRequest {
     @NotNull(message = "Pet type is required")
     private Integer typeId;
 
-    @NotNull(message = "Owner is required")
     private Integer ownerId;
 }
